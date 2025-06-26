@@ -1,158 +1,63 @@
-# Mudit's Portfolio
+# Mudit Rastogi - AI Engineer Portfolio 🤖
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript featuring a beautiful metallic greyscale design.
+> **8+ years of turning algorithms into real-world solutions** | Lead AI Engineer at Bobble AI
 
-## Features
+## About Me 🚀
 
-- 🎨 **Metallic Greyscale Design** - Elegant color scheme with metallic gradients
-- 📱 **Fully Responsive** - Works perfectly on all devices
-- ⚡ **Smooth Animations** - Scroll animations and hover effects
-- 🧭 **Smooth Navigation** - One-page design with smooth scrolling
-- 📝 **Contact Form** - Functional contact form (requires backend setup)
-- 🎯 **Modern UI/UX** - Clean and professional design
+AI Lead with expertise in building and deploying scalable AI/ML solutions across NLP, Computer Vision, and Generative AI. Proven track record in driving innovation, reducing operational costs by **76%**, and deploying deep learning systems handling **200K+ daily requests**.
 
-## Sections
+### Key Achievements
+- 🏆 **Bobble AI Innovation Award 2024** for Generative AI contributions
+- 📄 **Patent Holder**: [Personalized Cartoon Image Generation](https://patents.google.com/patent/US20240046536A1/en)
+- 📚 **IEEE Published**: [Low-Light Image Enhancement using Conditional GANs](https://ieeexplore.ieee.org/abstract/document/10009340)
+- ⚡ **Performance**: 30x delivery speed improvement, 95% faster inference with TensorRT
 
-1. **Hero Section** - Introduction and call-to-action
-2. **About** - Personal information and statistics
-3. **Experience** - Work history timeline
-4. **Projects** - Featured projects with descriptions
-5. **Skills** - Technical skills organized by category
-6. **Contact** - Contact information and form
+## Core Expertise 🛠️
 
-## Customization
+**AI/ML Frameworks**: PyTorch, TensorFlow, Keras, OpenCV  
+**Generative AI**: GANs, Stable Diffusion, LLMs (LLaMA 2, Mistral), HuggingFace  
+**NLP & Speech**: ASR, Speech-to-Text, WER Optimization, Multilingual Models  
+**Vector Search**: FAISS, Pinecone, Sentence Transformers  
+**Deployment**: Docker, Kubernetes, AWS, GCP, FastAPI  
 
-### Personal Information
-Update the following in `index.html`:
+## Featured Projects 🎯
 
-- **Name**: Replace "Mudit" with your name
-- **Title**: Update the hero subtitle
-- **Description**: Modify the about section text
-- **Contact Details**: Update email, phone, and location
-- **Social Links**: Add your social media profiles
+### 🎨 Disney-Style Cartoon Generator
+Real-time GAN-based cartoon generation handling 200K+ daily requests with 95% faster inference using TensorRT optimizations.
 
-### Experience Section
-Replace the placeholder experience items with your actual work history:
+### 🌍 Multilingual Vector Search
+FAISS-powered content search system with 71% relevance improvement using HuggingFace Transformers.
 
-```html
-<div class="timeline-item">
-    <div class="timeline-content">
-        <h3>Your Job Title</h3>
-        <h4>Company Name</h4>
-        <p class="timeline-date">2023 - Present</p>
-        <ul>
-            <li>Your achievement 1</li>
-            <li>Your achievement 2</li>
-            <li>Your achievement 3</li>
-        </ul>
-    </div>
-</div>
-```
+### 🏙️ Smart City AI Analytics
+Edge-based video analytics for traffic detection using YOLO and TensorFlow Lite for real-time processing.
 
-### Projects Section
-Update the project cards with your actual projects:
+### 🎤 Speech-to-Text Systems
+Enhanced WER by 17.7% (Hindi) and 19% (Bengali) through acoustic and language model tuning.
 
-```html
-<div class="project-card">
-    <div class="project-image">
-        <i class="fas fa-brain"></i> <!-- Change icon as needed -->
-    </div>
-    <div class="project-content">
-        <h3>Project Name</h3>
-        <p>Project description</p>
-        <div class="project-tech">
-            <span>Technology 1</span>
-            <span>Technology 2</span>
-        </div>
-        <div class="project-links">
-            <a href="your-github-link" class="project-link"><i class="fab fa-github"></i> Code</a>
-            <a href="your-live-link" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-        </div>
-    </div>
-</div>
-```
+### 🤖 LLM Fine-tuning Pipeline
+Fine-tuned LLaMA 2 and Mistral on proprietary datasets for content moderation and response suggestion.
 
-### Skills Section
-Update the skills in each category to match your expertise.
+## Professional Journey 💼
 
-## Deployment to GitHub Pages
+**Lead AI Engineer** @ Bobble AI *(Feb 2021 - Present)*  
+**Chief Technical Officer** @ Astute Resolutions *(Nov 2018 - Jan 2021)*  
+**Machine Learning Engineer** @ Attentive AI *(Feb 2018 - Oct 2018)*  
+**Trainee Software Engineer** @ Voxta Communication *(Jun 2017 - Jan 2018)*
 
-### Method 1: Automatic Deployment
+## Education 🎓
 
-1. **Create a new repository** on GitHub
-2. **Upload all files** to the repository:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-   - `README.md`
-3. **Go to Settings** → **Pages**
-4. **Select Source**: "Deploy from a branch"
-5. **Select Branch**: "main" (or "master")
-6. **Select Folder**: "/ (root)"
-7. **Click Save**
-8. Your site will be available at: `https://yourusername.github.io/repository-name`
+**B.Tech - Computer Science & Engineering**  
+Krishna Institute of Engineering and Technology, Ghaziabad  
+CGPA: 79.8%
 
-### Method 2: Using GitHub Pages Branch
+## Connect 📫
 
-1. Create a new branch called `gh-pages`
-2. Upload all files to this branch
-3. Go to Settings → Pages
-4. Select "Deploy from a branch"
-5. Select "gh-pages" branch
-6. Click Save
-
-## Custom Domain (Optional)
-
-1. **Purchase a domain** from a domain registrar
-2. **Add CNAME file** to your repository:
-   ```
-   yourdomain.com
-   ```
-3. **Configure DNS** with your domain provider:
-   - Add CNAME record pointing to `yourusername.github.io`
-4. **Update GitHub Pages settings**:
-   - Go to Settings → Pages
-   - Enter your custom domain
-   - Check "Enforce HTTPS"
-
-## File Structure
-
-```
-portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js           # JavaScript functionality
-├── README.md           # This file
-└── Mudit-Resume-AI.pdf # Your resume (optional)
-```
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## Performance Tips
-
-- Optimize images before uploading
-- Minimize CSS and JavaScript files for production
-- Use a CDN for external resources
-- Enable GZIP compression on your server
-
-## Contributing
-
-Feel free to fork this project and customize it for your own portfolio!
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Support
-
-If you have any questions or need help with customization, please open an issue on GitHub.
+📧 **Email**: mudit.rastogi.cv@gmail.com  
+📱 **Phone**: +91 8826383466  
+📍 **Location**: Gurugram, Haryana, India  
+🔗 **LinkedIn**: [Mudit Rastogi](https://linkedin.com/in/mudit-rastogi)  
+💻 **GitHub**: [muditrastogi](https://github.com/muditrastogi)
 
 ---
 
-**Note**: Remember to update all placeholder content with your actual information before deploying! 
+*"Building AI solutions that make a difference, one model at a time."* ✨ 
