@@ -39,10 +39,38 @@
         <p>Exploring the frontiers of AI/ML, one blog post at a time</p>
     </header>
 
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search by keywords, topics, or technologies..." class="search-input">
+                <button id="clearSearch" class="clear-btn" style="display: none;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="filter-tags">
+                <span class="filter-label">Quick Filters:</span>
+                <button class="tag-filter active" data-tag="all">All Posts</button>
+                <button class="tag-filter" data-tag="generative-ai">Generative AI</button>
+                <button class="tag-filter" data-tag="llms">LLMs</button>
+                <button class="tag-filter" data-tag="computer-vision">Computer Vision</button>
+                <button class="tag-filter" data-tag="speech-recognition">Speech Recognition</button>
+                <button class="tag-filter" data-tag="vector-search">Vector Search</button>
+                <button class="tag-filter" data-tag="research">Research</button>
+            </div>
+            <div class="search-results-info">
+                <span id="resultsCount">6 posts found</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Blog Grid -->
     <section class="blog-grid">
         <!-- Blog Post 1 -->
-        <article class="blog-card" onclick="location.href='blogs/disney-cartoon-generator.html'" style="cursor: pointer;">
+        <article class="blog-card" onclick="location.href='blogs/disney-cartoon-generator.html'" style="cursor: pointer;" 
+                 data-tags="generative-ai" 
+                 data-keywords="disney cartoon generator gan neural network deep learning pytorch optimization tensorrt">
             <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?ai')">
             </div>
             <div class="blog-content">
@@ -57,7 +85,9 @@
         </article>
 
         <!-- Blog Post 2 -->
-        <article class="blog-card" onclick="location.href='blogs/llm-finetuning.html'" style="cursor: pointer;">
+        <article class="blog-card" onclick="location.href='blogs/llm-finetuning.html'" style="cursor: pointer;"
+                 data-tags="llms" 
+                 data-keywords="llama mistral fine-tuning language model peft lora content moderation transformers huggingface">
             <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?neural')">
             </div>
             <div class="blog-content">
@@ -72,7 +102,9 @@
         </article>
 
         <!-- Blog Post 3 -->
-        <article class="blog-card" onclick="location.href='blogs/smart-city-ai.html'" style="cursor: pointer;">
+        <article class="blog-card" onclick="location.href='blogs/smart-city-ai.html'" style="cursor: pointer;"
+                 data-tags="computer-vision" 
+                 data-keywords="yolo edge ai smart city traffic detection computer vision opencv jetson nano">
             <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?city')">
             </div>
             <div class="blog-content">
@@ -87,7 +119,9 @@
         </article>
 
         <!-- Blog Post 4 -->
-        <article class="blog-card" onclick="location.href='blogs/speech-recognition-indian-languages.html'" style="cursor: pointer;">
+        <article class="blog-card" onclick="location.href='blogs/speech-recognition-indian-languages.html'" style="cursor: pointer;"
+                 data-tags="speech-recognition" 
+                 data-keywords="speech recognition hindi bengali wer acoustic model language model indian languages asr">
             <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?speech')">
             </div>
             <div class="blog-content">
@@ -102,7 +136,9 @@
         </article>
 
         <!-- Blog Post 5 -->
-        <article class="blog-card" onclick="location.href='blogs/vector-search-faiss.html'" style="cursor: pointer;">
+        <article class="blog-card" onclick="location.href='blogs/vector-search-faiss.html'" style="cursor: pointer;"
+                 data-tags="vector-search" 
+                 data-keywords="faiss vector search similarity embeddings transformers multilingual content relevance">
             <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?search')">
             </div>
             <div class="blog-content">
@@ -117,7 +153,9 @@
         </article>
 
         <!-- Blog Post 6 -->
-        <article class="blog-card" onclick="location.href='blogs/low-light-enhancement-gans.html'" style="cursor: pointer;">
+        <article class="blog-card" onclick="location.href='blogs/low-light-enhancement-gans.html'" style="cursor: pointer;"
+                 data-tags="research" 
+                 data-keywords="low light enhancement gan conditional gan ieee research image processing computer vision">
             <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?light')">
             </div>
             <div class="blog-content">
