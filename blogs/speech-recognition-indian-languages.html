@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improving WER in Indian Languages - Mudit's Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .blog-post h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .blog-meta {
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .blog-content {
+            line-height: 1.8;
+            color: #444;
+        }
+        .blog-content h2 {
+            color: #333;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #666;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Mudit 🤖</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../blog.html" class="nav-link">Blogs</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="../blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blogs</a>
+        
+        <article class="blog-post">
+            <h1>Improving WER in Indian Languages</h1>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> Published on December 2024</span> | 
+                <span><i class="far fa-clock"></i> 8 min read</span> | 
+                <span><i class="fas fa-tag"></i> Speech Recognition</span>
+            </div>
+            
+            <div class="blog-content">
+                <p>Ever tried explaining to Siri what "biryani" is, or asked Google Assistant to play some "Bollywood" music, only to get completely random results? Welcome to the world of speech recognition for Indian languages - where even the smartest AI sometimes sounds like it's having a bad day! 🎤😅</p>
+
+                <p>At Bobble AI, I spent months working on improving speech-to-text systems for Hindi and Bengali. Here's how we made AI understand Indian languages better than your cousin who's been living abroad for 10 years!</p>
+
+                <h2>The Challenge: Why Indian Languages Are Tricky for AI</h2>
+                <p>Before diving into solutions, let's understand why speech recognition for Indian languages is like teaching someone to recognize different types of mangoes - they might all look similar to outsiders, but locals can spot the differences instantly!</p>
+
+                <h3>Unique Challenges:</h3>
+                <ul>
+                    <li><strong>Accents galore:</strong> Hindi spoken in Delhi sounds different from Hindi in Mumbai</li>
+                    <li><strong>Code-switching:</strong> "Main kal office jane wala hun" (mixing Hindi and English)</li>
+                    <li><strong>Phoneme complexity:</strong> Indian languages have sounds that don't exist in English</li>
+                    <li><strong>Limited training data:</strong> Most speech datasets are in English</li>
+                    <li><strong>Background noise:</strong> Indian environments are... lively (honking cars, street vendors, etc.)</li>
+                </ul>
+
+                <h2>What is WER? (And Why It Matters)</h2>
+                <p>WER stands for Word Error Rate - basically, how often the AI gets words wrong. Think of it as the AI's report card:</p>
+                <ul>
+                    <li><strong>0% WER:</strong> Perfect transcription (like an A+ student)</li>
+                    <li><strong>10% WER:</strong> 1 word wrong out of every 10 (pretty good)</li>
+                    <li><strong>30% WER:</strong> Almost every third word is wrong (needs improvement)</li>
+                    <li><strong>50%+ WER:</strong> Might as well flip a coin!</li>
+                </ul>
+
+                <p>When we started, our Hindi WER was around 35% and Bengali was at 40%. Not terrible, but imagine if every third word in your text messages was wrong - frustrating, right?</p>
+
+                <h2>Our Approach: Building Better Speech Recognition</h2>
+
+                <h3>Step 1: Data, Data, Everywhere</h3>
+                <p>The first rule of ML: you're only as good as your data. We needed lots of high-quality audio paired with accurate transcriptions.</p>
+
+                <h4>What We Did:</h4>
+                <ul>
+                    <li><strong>Crowd-sourced recordings:</strong> Got native speakers to record common phrases</li>
+                    <li><strong>Movie dialogues:</strong> Extracted clean audio from Bollywood films (with subtitles)</li>
+                    <li><strong>News broadcasts:</strong> Clear, professional speech with known transcripts</li>
+                    <li><strong>Real user interactions:</strong> Anonymized voice messages (with permission)</li>
+                </ul>
+
+                <h4>Data Challenges We Faced:</h4>
+                <ul>
+                    <li><strong>Quality control:</strong> Filtering out background noise and unclear speech</li>
+                    <li><strong>Dialect balance:</strong> Making sure we had representation from different regions</li>
+                    <li><strong>Gender and age diversity:</strong> Young vs. old speakers, male vs. female voices</li>
+                    <li><strong>Transcription accuracy:</strong> Human transcribers make mistakes too!</li>
+                </ul>
+
+                <h3>Step 2: Acoustic Model Tuning</h3>
+                <p>Think of the acoustic model as the AI's "ears" - it learns to convert sound waves into meaningful units of speech (phonemes).</p>
+
+                <h4>Our Improvements:</h4>
+                <ul>
+                    <li><strong>Indian phoneme sets:</strong> Added sounds specific to Hindi/Bengali (like retroflex consonants)</li>
+                    <li><strong>Noise robustness:</strong> Trained with background noise to handle real-world conditions</li>
+                    <li><strong>Speaker adaptation:</strong> Models that quickly adapt to new voices</li>
+                    <li><strong>Multi-task learning:</strong> Training on multiple languages simultaneously</li>
+                </ul>
+
+                <h3>Step 3: Language Model Enhancement</h3>
+                <p>The language model is like the AI's "brain" - it uses context to figure out what words make sense together.</p>
+
+                <p>For example, if the acoustic model hears something like "mai kya karu" but is confused between "kya" and "kiya", the language model helps decide based on grammar rules.</p>
+
+                <h4>Our Language Model Improvements:</h4>
+                <ul>
+                    <li><strong>Large text corpora:</strong> Fed the model millions of Hindi/Bengali sentences</li>
+                    <li><strong>Domain-specific training:</strong> Separate models for news, casual conversation, technical terms</li>
+                    <li><strong>Code-switching handling:</strong> Taught the model to handle English words in Indian sentences</li>
+                    <li><strong>Grammar patterns:</strong> Indian language sentence structures and word orders</li>
+                </ul>
+
+                <h2>The Technical Deep Dive</h2>
+
+                <h3>Architecture: BiLSTM + Attention</h3>
+                <p>We used BiLSTM (Bidirectional Long Short-Term Memory) networks with attention mechanisms. Sounds fancy, but here's the simple explanation:</p>
+
+                <ul>
+                    <li><strong>BiLSTM:</strong> Looks at speech both forwards and backwards (like reading a sentence and then reading it in reverse to catch details you missed)</li>
+                    <li><strong>Attention:</strong> Focuses on important parts of the audio (like how you focus on keywords when someone's talking)</li>
+                </ul>
+
+                <h3>Feature Engineering</h3>
+                <p>We extracted several types of features from the audio:</p>
+                <ul>
+                    <li><strong>MFCC (Mel-frequency cepstral coefficients):</strong> The classic choice for speech recognition</li>
+                    <li><strong>Pitch and tone features:</strong> Important for Indian languages which use tone for meaning</li>
+                    <li><strong>Spectral features:</strong> Helped distinguish between similar-sounding phonemes</li>
+                    <li><strong>Voice activity detection:</strong> Separating speech from silence/noise</li>
+                </ul>
+
+                <h2>Real-World Testing: The Proof of the Pudding</h2>
+
+                <h3>Test Environments:</h3>
+                <ul>
+                    <li><strong>Quiet office:</strong> Controlled environment (easiest)</li>
+                    <li><strong>Coffee shops:</strong> Background chatter and noise</li>
+                    <li><strong>Street recordings:</strong> Traffic, vendors, general chaos</li>
+                    <li><strong>Phone calls:</strong> Compressed audio quality</li>
+                    <li><strong>Video calls:</strong> Internet-induced audio artifacts</li>
+                </ul>
+
+                <h3>Results That Made Us Dance:</h3>
+                <ul>
+                    <li><strong>Hindi WER:</strong> Improved from 35% to 17.3% (47% relative improvement!)</li>
+                    <li><strong>Bengali WER:</strong> Improved from 40% to 21% (47.5% relative improvement!)</li>
+                    <li><strong>Real-time processing:</strong> Less than 200ms latency</li>
+                    <li><strong>Code-switching accuracy:</strong> 85% correct handling of mixed language sentences</li>
+                </ul>
+
+                <h2>The Fun Stuff: Unexpected Learning</h2>
+
+                <h3>Regional Accents Are Wild</h3>
+                <p>We discovered that Mumbai Hindi has more English words mixed in compared to Delhi Hindi. Our model had to learn that "station" in Mumbai might be pronounced as "shtation"!</p>
+
+                <h3>Emotional Speech Is Different</h3>
+                <p>People speak differently when angry, excited, or sad. Our model learned to handle emotional variations in speech patterns.</p>
+
+                <h3>Age Matters</h3>
+                <p>Older speakers often use more formal language structures, while younger speakers use more slang and English words.</p>
+
+                <h2>Challenges We're Still Solving</h2>
+
+                <h3>The Never-Ending Battle with Noise</h3>
+                <p>Indian environments are acoustically challenging. From street vendors to festival celebrations, there's always something happening in the background!</p>
+
+                <h3>Rare Words and Names</h3>
+                <p>Indian names and places are incredibly diverse. Teaching AI to recognize "Thiruvananthapuram" or "Chhattisgarh" correctly is still a work in progress.</p>
+
+                <h3>Multiple Speakers</h3>
+                <p>Family conversations where everyone talks over each other - still gives our AI a headache!</p>
+
+                <h2>Practical Tips for Speech Recognition Developers</h2>
+
+                <h3>Data Collection Best Practices:</h3>
+                <ul>
+                    <li>Record in various noise conditions from day one</li>
+                    <li>Include speakers of different ages and regions</li>
+                    <li>Capture natural, conversational speech (not just read text)</li>
+                    <li>Balance formal and informal speech styles</li>
+                </ul>
+
+                <h3>Model Training Tips:</h3>
+                <ul>
+                    <li>Start with a pre-trained model (don't build from scratch)</li>
+                    <li>Use data augmentation (speed up/slow down audio, add noise)</li>
+                    <li>Implement curriculum learning (easy examples first, then hard ones)</li>
+                    <li>Regular evaluation on held-out test sets</li>
+                </ul>
+
+                <h2>The Business Impact</h2>
+                <p>Better speech recognition opened up new possibilities:</p>
+                <ul>
+                    <li><strong>Voice assistants:</strong> Actually useful for Indian users</li>
+                    <li><strong>Accessibility:</strong> Voice input for people who struggle with typing</li>
+                    <li><strong>Content creation:</strong> Faster video subtitling and transcription</li>
+                    <li><strong>Customer service:</strong> Automated phone systems that actually work</li>
+                </ul>
+
+                <h2>What's Next?</h2>
+                <p>We're working on:</p>
+                <ul>
+                    <li><strong>More Indian languages:</strong> Tamil, Telugu, Marathi are next</li>
+                    <li><strong>Real-time translation:</strong> Speak in Hindi, get English text instantly</li>
+                    <li><strong>Emotion recognition:</strong> Understanding not just what you say, but how you feel</li>
+                    <li><strong>Smaller models:</strong> Running good speech recognition on smartphones</li>
+                </ul>
+
+                <h2>Final Thoughts</h2>
+                <p>Working on speech recognition for Indian languages taught me that technology isn't just about algorithms - it's about understanding culture, language evolution, and human behavior.</p>
+
+                <p>Every improvement in WER means better accessibility for millions of people. Every correctly recognized word means someone can communicate more naturally with technology.</p>
+
+                <p>The journey from 35% to 17% WER wasn't just about better models - it was about understanding how people actually speak in real life, not in laboratory conditions.</p>
+
+                <p><em>Working on speech recognition? Building voice interfaces for Indian languages? Let's chat - I'd love to share more detailed insights and learn from your experiences too! 🗣️🇮🇳</em></p>
+            </div>
+        </article>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

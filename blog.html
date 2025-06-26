@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudit's AI Blog - Thoughts on AI/ML</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional Blog-specific styles */
+        .blog-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: white;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .blog-meta i {
+            margin-right: 5px;
+        }
+
+        .blog-meta span {
+            margin-right: 15px;
+        }
+
+        .coming-soon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Mudit 🤖</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="#" class="nav-link active">Blog</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <h1>AI Engineering Insights 🧠</h1>
+        <p>Exploring the frontiers of AI/ML, one blog post at a time</p>
+    </header>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid">
+        <!-- Blog Post 1 -->
+        <article class="blog-card" onclick="location.href='blogs/disney-cartoon-generator.html'" style="cursor: pointer;">
+            <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?ai')">
+            </div>
+            <div class="blog-content">
+                <span class="blog-tag">Generative AI</span>
+                <h2 class="blog-title">Building Disney-Style Cartoon Generators: A Deep Dive</h2>
+                <p class="blog-excerpt">Exploring the architecture and optimization techniques behind our viral cartoon generation system handling 200K+ daily requests.</p>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> December 2024</span>
+                    <span><i class="far fa-clock"></i> 15 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="blog-card" onclick="location.href='blogs/llm-finetuning.html'" style="cursor: pointer;">
+            <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?neural')">
+            </div>
+            <div class="blog-content">
+                <span class="blog-tag">LLMs</span>
+                <h2 class="blog-title">Fine-tuning LLaMA 2 & Mistral: Lessons Learned</h2>
+                <p class="blog-excerpt">A comprehensive guide to fine-tuning large language models for content moderation and response generation.</p>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> December 2024</span>
+                    <span><i class="far fa-clock"></i> 12 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="blog-card" onclick="location.href='blogs/smart-city-ai.html'" style="cursor: pointer;">
+            <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?city')">
+            </div>
+            <div class="blog-content">
+                <span class="blog-tag">Computer Vision</span>
+                <h2 class="blog-title">Edge AI for Smart Cities: From Theory to Practice</h2>
+                <p class="blog-excerpt">Real-world implementation of YOLO-based traffic detection systems on edge devices for smart city applications.</p>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> December 2024</span>
+                    <span><i class="far fa-clock"></i> 10 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Blog Post 4 -->
+        <article class="blog-card" onclick="location.href='blogs/speech-recognition-indian-languages.html'" style="cursor: pointer;">
+            <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?speech')">
+            </div>
+            <div class="blog-content">
+                <span class="blog-tag">Speech Recognition</span>
+                <h2 class="blog-title">Improving WER in Indian Languages</h2>
+                <p class="blog-excerpt">Technical deep-dive into acoustic and language model tuning for Hindi and Bengali speech recognition systems.</p>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> December 2024</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Blog Post 5 -->
+        <article class="blog-card" onclick="location.href='blogs/vector-search-faiss.html'" style="cursor: pointer;">
+            <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?search')">
+            </div>
+            <div class="blog-content">
+                <span class="blog-tag">Vector Search</span>
+                <h2 class="blog-title">Scaling Vector Search with FAISS</h2>
+                <p class="blog-excerpt">How we achieved 71% relevance improvement in multilingual content search using FAISS and HuggingFace Transformers.</p>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> December 2024</span>
+                    <span><i class="far fa-clock"></i> 10 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Blog Post 6 -->
+        <article class="blog-card" onclick="location.href='blogs/low-light-enhancement-gans.html'" style="cursor: pointer;">
+            <div class="blog-image" style="background-image: url('https://source.unsplash.com/random/800x600?light')">
+            </div>
+            <div class="blog-content">
+                <span class="blog-tag">Research</span>
+                <h2 class="blog-title">Low-Light Image Enhancement with GANs</h2>
+                <p class="blog-excerpt">Behind the scenes of our IEEE-published research on using Conditional GANs for low-light image enhancement.</p>
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> December 2024</span>
+                    <span><i class="far fa-clock"></i> 15 min read</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/muditrastogi" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/mudit-rastogi" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p>&copy; 2024 Mudit Rastogi. All rights reserved. Powered by ☕ and 🧠</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
